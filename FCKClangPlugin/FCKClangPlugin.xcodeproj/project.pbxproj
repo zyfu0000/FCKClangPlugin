@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72638D931E8C04AD0059B4A7 /* FCKClangPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 72638D921E8C04AD0059B4A7 /* FCKClangPlugin.h */; };
-		72638D951E8C04AD0059B4A7 /* FCKClangPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 72638D941E8C04AD0059B4A7 /* FCKClangPlugin.m */; };
+		72638D9E1E8C09770059B4A7 /* ClangCodingStylePlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72638D9B1E8C09770059B4A7 /* ClangCodingStylePlugin.cpp */; };
+		72638D9F1E8C09770059B4A7 /* ClangCodingStylePlugin.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 72638D9C1E8C09770059B4A7 /* ClangCodingStylePlugin.hpp */; };
+		72638DA01E8C09770059B4A7 /* CodingStyleUtil.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 72638D9D1E8C09770059B4A7 /* CodingStyleUtil.hpp */; };
+		72638DA31E8C09B60059B4A7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72638DA21E8C09B60059B4A7 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		72638D8F1E8C04AD0059B4A7 /* libFCKClangPlugin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libFCKClangPlugin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		72638D921E8C04AD0059B4A7 /* FCKClangPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCKClangPlugin.h; sourceTree = "<group>"; };
-		72638D941E8C04AD0059B4A7 /* FCKClangPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCKClangPlugin.m; sourceTree = "<group>"; };
+		72638D9B1E8C09770059B4A7 /* ClangCodingStylePlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClangCodingStylePlugin.cpp; sourceTree = "<group>"; };
+		72638D9C1E8C09770059B4A7 /* ClangCodingStylePlugin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ClangCodingStylePlugin.hpp; sourceTree = "<group>"; };
+		72638D9D1E8C09770059B4A7 /* CodingStyleUtil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CodingStyleUtil.hpp; sourceTree = "<group>"; };
+		72638DA21E8C09B60059B4A7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72638DA31E8C09B60059B4A7 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +38,7 @@
 			children = (
 				72638D911E8C04AD0059B4A7 /* FCKClangPlugin */,
 				72638D901E8C04AD0059B4A7 /* Products */,
+				72638DA11E8C09B60059B4A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,10 +53,19 @@
 		72638D911E8C04AD0059B4A7 /* FCKClangPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				72638D921E8C04AD0059B4A7 /* FCKClangPlugin.h */,
-				72638D941E8C04AD0059B4A7 /* FCKClangPlugin.m */,
+				72638D9B1E8C09770059B4A7 /* ClangCodingStylePlugin.cpp */,
+				72638D9C1E8C09770059B4A7 /* ClangCodingStylePlugin.hpp */,
+				72638D9D1E8C09770059B4A7 /* CodingStyleUtil.hpp */,
 			);
 			path = FCKClangPlugin;
+			sourceTree = "<group>";
+		};
+		72638DA11E8C09B60059B4A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72638DA21E8C09B60059B4A7 /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,7 +75,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72638D931E8C04AD0059B4A7 /* FCKClangPlugin.h in Headers */,
+				72638DA01E8C09770059B4A7 /* CodingStyleUtil.hpp in Headers */,
+				72638D9F1E8C09770059B4A7 /* ClangCodingStylePlugin.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72638D951E8C04AD0059B4A7 /* FCKClangPlugin.m in Sources */,
+				72638D9E1E8C09770059B4A7 /* ClangCodingStylePlugin.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,10 +235,80 @@
 		72638D991E8C04AD0059B4A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CONFIGURATION_BUILD_DIR = /opt/llvm/clangplugin;
 				DEVELOPMENT_TEAM = V4CBDCFQ88;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/llvm/llvm/include,
+					/opt/llvm/llvm/tools/clang/include,
+					/opt/llvm/llvm_build/include,
+					/opt/llvm/llvm_build/tools/clang/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /opt/llvm/llvm_build/lib;
+				LIBRARY_SEARCH_PATHS = /opt/llvm/llvm_build/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fPIC",
+					"-fno-common",
+					"-Woverloaded-virtual",
+					"-Wcast-qual",
+					"-fno-strict-aliasing",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wall",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-fno-rtti",
+					"-fPIC",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lclang",
+					"-lclangFrontend",
+					"-lclangAST",
+					"-lclangAnalysis",
+					"-lclangBasic",
+					"-lclangCodeGen",
+					"-lclangDriver",
+					"-lclangFrontendTool",
+					"-lclangLex",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangEdit",
+					"-lclangSerialization",
+					"-lclangStaticAnalyzerCheckers",
+					"-lclangStaticAnalyzerCore",
+					"-lclangStaticAnalyzerFrontend",
+					"-lLLVMX86CodeGen",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86Disassembler",
+					"-lLLVMExecutionEngine",
+					"-lLLVMAsmPrinter",
+					"-lLLVMSelectionDAG",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Info",
+					"-lLLVMMCParser",
+					"-lLLVMCodeGen",
+					"-lLLVMX86Utils",
+					"-lLLVMScalarOpts",
+					"-lLLVMInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMTarget",
+					"-lLLVMCore",
+					"-lLLVMMC",
+					"-lLLVMSupport",
+					"-lLLVMBitReader",
+					"-lLLVMOption",
+					"-lLLVMProfileData",
+					"-lpthread",
+					"-lcurses",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -230,10 +316,80 @@
 		72638D9A1E8C04AD0059B4A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CONFIGURATION_BUILD_DIR = /opt/llvm/clangplugin;
 				DEVELOPMENT_TEAM = V4CBDCFQ88;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/llvm/llvm/include,
+					/opt/llvm/llvm/tools/clang/include,
+					/opt/llvm/llvm_build/include,
+					/opt/llvm/llvm_build/tools/clang/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /opt/llvm/llvm_build/lib;
+				LIBRARY_SEARCH_PATHS = /opt/llvm/llvm_build/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fPIC",
+					"-fno-common",
+					"-Woverloaded-virtual",
+					"-Wcast-qual",
+					"-fno-strict-aliasing",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wall",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-fno-rtti",
+					"-fPIC",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lclang",
+					"-lclangFrontend",
+					"-lclangAST",
+					"-lclangAnalysis",
+					"-lclangBasic",
+					"-lclangCodeGen",
+					"-lclangDriver",
+					"-lclangFrontendTool",
+					"-lclangLex",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangEdit",
+					"-lclangSerialization",
+					"-lclangStaticAnalyzerCheckers",
+					"-lclangStaticAnalyzerCore",
+					"-lclangStaticAnalyzerFrontend",
+					"-lLLVMX86CodeGen",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86Disassembler",
+					"-lLLVMExecutionEngine",
+					"-lLLVMAsmPrinter",
+					"-lLLVMSelectionDAG",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Info",
+					"-lLLVMMCParser",
+					"-lLLVMCodeGen",
+					"-lLLVMX86Utils",
+					"-lLLVMScalarOpts",
+					"-lLLVMInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMTarget",
+					"-lLLVMCore",
+					"-lLLVMMC",
+					"-lLLVMSupport",
+					"-lLLVMBitReader",
+					"-lLLVMOption",
+					"-lLLVMProfileData",
+					"-lpthread",
+					"-lcurses",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -257,6 +413,7 @@
 				72638D9A1E8C04AD0059B4A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

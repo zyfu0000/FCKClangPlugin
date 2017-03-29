@@ -4,4 +4,7 @@
    <FileRef
       location = "group:FCKClangPlugin/FCKClangPlugin.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:FCKClangPluginDemo/FCKClangPluginDemo.xcodeproj">
+   </FileRef>
 </Workspace>
