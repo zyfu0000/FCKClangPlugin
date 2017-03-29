@@ -1,0 +1,2 @@
+# FCKClangPlugin
+Another clang plugin
