@@ -9,7 +9,7 @@
 #ifndef CodingStyleUtil_hpp
 #define CodingStyleUtil_hpp
 #include <string>
-#include<algorithm>
+#include <algorithm>
 #include <functional>
 #include <string>
 #include <fstream>

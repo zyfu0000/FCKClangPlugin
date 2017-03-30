@@ -283,6 +283,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
+					"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+					"-mios-version-min=8.0",
 					"-Xclang",
 					"-load",
 					"-Xclang",
@@ -291,6 +293,8 @@
 					"-add-plugin",
 					"-Xclang",
 					FCKClangPlugin,
+					"-Xclang",
+					"-plugin-arg-FCKClangPlugin",
 					"-Xclang",
 					$SRCROOT,
 				);
@@ -309,6 +313,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
+					"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+					"-mios-version-min=8.0",
 					"-Xclang",
 					"-load",
 					"-Xclang",
@@ -317,6 +323,8 @@
 					"-add-plugin",
 					"-Xclang",
 					FCKClangPlugin,
+					"-Xclang",
+					"-plugin-arg-FCKClangPlugin",
 					"-Xclang",
 					$SRCROOT,
 				);

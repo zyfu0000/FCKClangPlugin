@@ -369,4 +369,4 @@ namespace CodingStyle
 }
 
 static clang::FrontendPluginRegistry::Add<CodingStyle::CodingStyleASTAction>
-X("ClangCodingStylePlugin", "ClangCodingStylePlugin");
+X("FCKClangPlugin", "FCKClangPlugin");
